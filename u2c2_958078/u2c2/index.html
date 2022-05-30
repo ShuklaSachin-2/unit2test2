@@ -10,13 +10,7 @@
         margin: 0px;
         padding: 0px;
       }
-      #main{
-          width: 100%;
-          height: 800px;
-          display: flex;
-          flex-direction: column;
-
-      }
+     
       #banner{
         width: 80%;
         /* height: 150px; */
@@ -29,10 +23,10 @@
       }
       #banner>div:nth-child(1){
         width: 30%;
-        /* height: 200px; */
+        height: 200px;
         /* border: 1px solid teal; */
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         color: white;
       }
       #banner>div:nth-child(1)>h2{
@@ -42,6 +36,7 @@
       #banner>div:nth-child(1)>p{
         font-size: 10px;
         margin-top: 10px ;
+        text-align: left;
       }
 
         
@@ -53,39 +48,45 @@
         margin-top: 2px;
       }
       #banner>div:nth-child(2){
-        width: 20%;
+        width: 30%;
         
         /* height: 200px; */
         /* border: 1px solid black; */
       }
       #banner>div:nth-child(2)>img{
         width: 100%;
-        height: 150px;
+        height: 200px;
         
       }
       /* service section */
       #services{
         width: 80%;
-        height: 150px;
+        height: 180px;
         /* border: 1px solid red; */
         display: grid;
         margin: auto;
         margin-top: 10px;
         border-radius: 20px;
         grid-template-columns: repeat(6,1fr);
-        grid-template-rows: repeat(1,150px);
+        grid-template-rows: repeat(1,180px);
         grid-area: "a b c d e f";
-        justify-content: space-evenly;
+        /* justify-content: space-around; */
         column-gap: 15px;
         margin-bottom: 10px;
+        
 
       }
       #services>div{
-        justify-content: center;
+        /* justify-content: center; */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
         
       }
+      #services>div{
+        text-align: left;
+      }
+
       #services>div:nth-child(1){
-        
         grid-area: "a";
       }
       #services>div:nth-child(2){
@@ -117,7 +118,7 @@
       /* works section */
       #works>h1,p{
         text-align: center;
-        margin: 20px;
+       
         
       }
       #works>h1>p{
@@ -129,69 +130,96 @@
         /* border: 1px solid red; */
         margin: auto;
         display: grid;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
-
-
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(2,200px);
+        grid-template-rows: repeat(2,180px);
         grid-template-areas: "a b c d"
         "e f g h";
-        gap: 20px 20px;
+        row-gap: 30px;
+        column-gap: 20px;
+        text-align: left;
       }
+        
+
+
 
       #works>div>div:nth-child(1){
-       
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "a";
       }
       #works>div>div:nth-child(2){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "b";
       }
       #works>div>div:nth-child(3){
-       
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "c";
       }
       #works>div>div:nth-child(4){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "d";
       }
       #works>div>div:nth-child(5){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "e";
       }
       #works>div>div:nth-child(6){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area:"f" ;
       }
       #works>div>div:nth-child(7){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area: "g";
       }
       #works>div>div:nth-child(8){
-        
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         grid-area:"h" ;
       }
        #works>div>div>img{
-         width: 250px;
-         height: 120px;
+         width: 288px;
+         height: 150px;
        }
        #works>h1{
            padding-top: 30px;
-           display: flex;
-           flex-direction: column;
-       }
-       #works>p{
            
-           padding-bottom: 20px;
+           
+           
        }
+      
 
 
 
       /* Medium Screen */
       @media only screen and (min-width: 500px) and (max-width: 768px) {
 
-
+          #banner{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+        background-color: rgb(37,47,130);
+        margin: auto;
+        border-radius: 20px;
+      }
+        #banner>div:nth-child(1){
+        width: 80%;
+        height: 200px;
+        /* border: 1px solid teal; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        
+      }
+       #works>h1{
+          
+           display: none;
+           
+           
+       }
+       #works>p{
+         display: none;
+       }
 
          #services{
         
@@ -200,14 +228,16 @@
         grid-area: "a b c"
                     "d e f";
         justify-content: space-evenly;
-        column-gap: 15px;
-        margin-bottom: 10px;
+        column-gap: 10px;
+        row-gap: 10px;
+        /* margin-bottom: 10px; */
 
       }
+      
 
       #works>div{
        
-
+        margin-top: 50px;
 
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(4,200px);
@@ -231,12 +261,35 @@
         
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         
         background-color: rgb(37,47,130);
         margin: auto;
         border-radius: 20px;
       }
-
+       #banner>div:nth-child(1){
+        width: 80%;
+        height: 200px;
+        /* border: 1px solid teal; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        color: white;
+      }
+       #banner>div:nth-child(2){
+        width: 90%;
+        
+        /* height: 200px; */
+        /* border: 1px solid black; */
+      }
+       #works>p{
+         display: none;
+       }
+        #works>h1{
+          
+           display: none;
+           
+           
+       }
 
 
 
@@ -244,13 +297,14 @@
         #services{
         
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,150px);
+        grid-template-rows: repeat(3,100px);
         grid-area: "a b"
-                    "c d"
-                     "e f";
-        justify-content: space-evenly;
-        column-gap: 15px;
-        margin-bottom: 10px;
+                  "c d"
+                  "e f";
+        justify-content: space-between;
+        column-gap: 5px;
+        row-gap: 10px;
+        /* margin-bottom: 10px; */
 
       }
 
@@ -259,7 +313,7 @@
 
 
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(1,200px);
+        grid-template-rows: repeat(1,80px);
         grid-template-areas: 
         "a"
         "b"
@@ -270,7 +324,7 @@
         "g"
         "h";
         
-        gap: 20px 20px;
+        gap: 10px 10px;
       }
 
 
@@ -333,42 +387,42 @@
           <!-- Here should be 8 divs. They should be in 4 colums and two rows for large screen.For medium and large screen refer to question statement -->
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
           <div>
             <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
-            <h4>Dentist</h4>
+            <h3>Dentist</h3>
             <p>Teething Trouble?SChedule a dental checkup</p>
           </div>
         </div>
